@@ -1,7 +1,7 @@
 <template>
   <div> 
       <div class="container p-5">
-          <h3>All Jewelery Products</h3>
+          <h3>All {{name.toUpperC}} Products</h3>
     <div class="row">
         <Cards v-for="product in products" :key="product.id" :product="product"/>
     </div>
@@ -14,6 +14,7 @@ import Cards from "./Cards.vue"
 
 export default {
   name: "Productlist",
+  props:['name'],
   components: {
       Cards
   },
@@ -23,7 +24,7 @@ export default {
       }
   },
   mounted(){
-      return this.$store.dispatch('category')
+      return this.$store.dispatch('category' ,this.name)
   }
 };
 </script>

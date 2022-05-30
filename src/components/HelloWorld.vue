@@ -11,10 +11,11 @@
           <router-link class="nav-link active" aria-current="page" to="/">Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link active" to="/about">Products</router-link>
+          <router-link class="nav-link active" to="/products">Products</router-link>
         </li>
       </ul>
-        <div>
+        <div class="d-flex">
+            <router-link class="nav-link active" to="/login">Login</router-link>
             <p  class="mt-2" style="color: white; cursor:pointer" @click="$router.push({ path: '/Cart' })">{{$store.getters.cartlen}} Cart</p>
         </div>
         

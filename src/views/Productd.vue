@@ -17,7 +17,7 @@ export default {
     props:['id'],
     computed:{
         product(){
-            return this.$store.state.product
+            return this.$store.state.product.product
         }
     },
     mounted(){

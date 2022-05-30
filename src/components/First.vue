@@ -10,7 +10,7 @@
                  Providt architecto illum vitae, cum illo odit <b> placeat? Laboriosam,</b>
                  error voluptas  <b> placeat? Laboriosam,</b> nobis amet omnis quis aliquid illo <b> modi facilis!</b>
             </p>
-            <router-link class="btn btn-primary" to="/about"> Show All Products</router-link>
+            <router-link class="btn btn-primary" to="/products"> Show All Products</router-link>
 
         </div>
         <div class="col-6">

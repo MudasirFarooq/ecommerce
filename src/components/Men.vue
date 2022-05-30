@@ -22,7 +22,7 @@ export default {
       }
   },
   mounted(){
-      return this.$store.dispatch('category1')
+      return this.$store.dispatch('category')
   }
 };
 </script>

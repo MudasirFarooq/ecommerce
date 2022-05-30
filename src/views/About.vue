@@ -5,16 +5,23 @@
         <h3 class="head">Search by Categories</h3>
         <ul>
           <li @click="$router.push({ path: '/men' })">Men's Clothe</li>
-          <li @click="category(wemen)">Women's Clothe</li>
-          <li @click="$router.push({ path: '/jewelery' })">Jewelery</li>
-          <li @click="category(electric)">Electronics</li>
+          <li @click="$router.push({ name:'category' ,params: { name: 'electronics' } })">Women's Clothe</li>
+          <li @click="$router.push({ name:'category' ,params: { name: 'jewelery' } })">Jewelery</li>
+          <li @click="$router.push({ name:'category' ,params: { name: 'electronics' } })">Electronics</li>
         </ul>
       
       </div>
-      
-      <div class="col-9 col2">
+        <div class="col-9 col2">
         <h3>ALL Products</h3>
-        <Productlist />
+        <Suspense>
+  <!-- component with nested async dependencies -->
+        <Productlist/>
+
+  <!-- loading state via #fallback slot -->
+  <template #fallback>
+    Loading...
+  </template>
+</Suspense>
       </div>
     </div>
   </div>
@@ -32,10 +39,7 @@ export default {
 }
   },
   methods:{
-    category(jewelery){
-      console.log(jewelery)
-      return this.$store.dispatch('category' ,jewelery)
-    }
+    
   },
   components: {
     Productlist,
@@ -47,7 +51,7 @@ export default {
   width: 275px;
   }
 h3{
-  border-bottom: 5px solid #0d3835;
+  border-bottom: 5px solid rgb(13, 56, 53);
   padding: 5px 0;
   margin-bottom: 30px;
 }

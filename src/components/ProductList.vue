@@ -1,8 +1,12 @@
 <template>
   <div> 
     <div class="row">
+      
         <Cards v-for="product in products" :key="product.id" :product="product"/>
     </div>
+    <pre>
+    {{products}}
+    </pre>
   </div>
 </template> 
 <script>
@@ -15,12 +19,13 @@ export default {
   },
   computed:{
       products(){
-          return this.$store.state.products
+          return this.$store.state.product.products
       }
   },
   mounted(){
       this.$store.dispatch('allproduct');
-  }
+  },
+  
 };
 </script>
 <style>

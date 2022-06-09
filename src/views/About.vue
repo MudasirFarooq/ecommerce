@@ -13,15 +13,9 @@
       </div>
         <div class="col-9 col2">
         <h3>ALL Products</h3>
-        <Suspense>
-  <!-- component with nested async dependencies -->
-        <Productlist/>
+       
+        <Productlist/>  
 
-  <!-- loading state via #fallback slot -->
-  <template #fallback>
-    Loading...
-  </template>
-</Suspense>
       </div>
     </div>
   </div>

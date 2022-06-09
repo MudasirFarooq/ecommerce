@@ -5,7 +5,6 @@
         <Cards v-for="product in products" :key="product.id" :product="product"/>
     </div>
     <pre>
-    {{products}}
     </pre>
   </div>
 </template> 
